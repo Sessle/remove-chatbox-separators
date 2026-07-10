@@ -28,9 +28,6 @@ public class removeSeparatorPlugin extends Plugin
 	@Inject
 	private ClientThread clientThread;
 
-	@Inject
-	private removeSeparatorConfig config;
-
 	@Subscribe
 	public void onClientTick(ClientTick event)
 	{
@@ -53,9 +50,4 @@ public class removeSeparatorPlugin extends Plugin
 		}
 	}
 
-	@Provides
-	removeSeparatorConfig provideConfig(ConfigManager configManager)
-	{
-		return configManager.getConfig(removeSeparatorConfig.class);
-	}
 }
