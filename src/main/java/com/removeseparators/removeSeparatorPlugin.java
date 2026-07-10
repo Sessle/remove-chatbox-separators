@@ -18,7 +18,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Remove Chatbox Separators"
 )
 public class removeSeparatorPlugin extends Plugin
 {
