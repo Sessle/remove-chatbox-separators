@@ -9,6 +9,7 @@ import net.runelite.api.GameState;
 import net.runelite.api.events.ClientTick;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.WidgetLoaded;
+import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.widgets.Widget;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
@@ -36,11 +37,11 @@ public class removeSeparatorPlugin extends Plugin
 
 	private void hideChatSeparators()
 	{
-		Widget container = client.getWidget(162, 56);
+		Widget container = client.getWidget(InterfaceID.Chatbox.CHATDISPLAY);
 
 		if (container == null || container.getChildren() == null)
 		{
-			log.info("Container null");
+			log.debug("Container null");
 			return;
 		}
 
